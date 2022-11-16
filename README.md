@@ -43,6 +43,7 @@ MERN Stack Application for tracking Job Search Process
 - Add jobs
 - Browse user's jobs with (search + filter) feature
 - Display jobs-Matrics
+- Role Based Access
 
 ### Built With
 
@@ -133,6 +134,11 @@ This project require some perquisites and dependencies to be installed, you can 
   - Register User: [http://localhost:8000/api/v1/auth/register](http://localhost:8000/api/v1/auth/register) [POST]
   - Register User: [http://localhost:8000/api/v1/auth/login](http://localhost:8000/api/v1/auth/login) [POST]
   - Update User: [http://localhost:8000/api/v1/auth/updateUser](http://localhost:8000/api/v1/auth/updateUser) [PATCH]
+
+- **Only Admin Role can access**
+
+  - All Users: [http://localhost:8000/api/v1/auth/allUsers](http://localhost:8000/api/v1/auth/allUsers) [GET]
+
 
 - **Jobs**
 

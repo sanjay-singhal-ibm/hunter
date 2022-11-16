@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { Register, Landing, Error, ProtectedRoute } from "./pages";
 import {
   AllJobs,
@@ -6,7 +6,9 @@ import {
   SharedLayout,
   Stats,
   AddJob,
+  AllUsers
 } from "./pages/Dashboard";
+import RestrictedRoute from "./pages/RestrictedRoute";
 
 function App() {
   return (
@@ -25,6 +27,7 @@ function App() {
           <Route path="all-jobs" element={<AllJobs />} />
           <Route path="add-job" element={<AddJob />} />
           <Route path="profile" element={<Profile />} />
+          <Route path="all-users" element={<RestrictedRoute><AllUsers /></RestrictedRoute>} />
         </Route>
 
         <Route path="/register" element={<Register />}></Route>

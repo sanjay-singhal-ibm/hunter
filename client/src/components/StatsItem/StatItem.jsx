@@ -1,6 +1,6 @@
 import Wrapper from "./StatItem.styles";
 
-const StatsItem = ({ count, title, icon, color, bcg }) => {
+const StatsItem = ({ count, title, color, bcg }) => {
   return (
     // using color,bcg as props in the styled-components
     <Wrapper color={color} bcg={bcg}>
