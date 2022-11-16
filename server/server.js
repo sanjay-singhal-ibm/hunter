@@ -17,7 +17,7 @@ import jobsRouter from "./routes/jobsRouter.js";
 // ------------middleware------------ //
 import notFoundMiddleware from "./middlewares/not-found.js";
 import errorHandlerMiddleware from "./middlewares/error-handler.js";
-import authenticateUser from "./middlewares/auth.js";
+import { protect } from "./middlewares/auth.js";
 
 // ------------Security Packages------------ //
 import helmet from "helmet";
@@ -48,7 +48,7 @@ app.get("/api/v1", (req, res) => {
   res.json("Welcome!");
 });
 app.use("/api/v1/auth", authRouter);
-app.use("/api/v1/jobs", authenticateUser, jobsRouter);
+app.use("/api/v1/jobs", protect, jobsRouter);
 
 // direct to index.html for react-router after the 2 routes above
 app.get("*", (req, res) => {
